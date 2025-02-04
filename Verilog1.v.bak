@@ -1,0 +1,8 @@
+input [6:0] Op, Funct7,
+								input [2:0] Funct3,
+								output reg [2:0] ULAControl,
+								output reg ULASrc,
+								output reg RegWrite,
+								output reg ImmSrc,
+								output reg MemWrite,
+								output reg ResultSrc

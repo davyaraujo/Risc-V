@@ -1,0 +1,1224 @@
+$comment
+	File created using the following command:
+		vcd file Mod_Teste.msim.vcd -direction
+$end
+$date
+	Fri Aug 04 10:39:18 2023
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module Mod_Teste_vlg_vec_tst $end
+$var reg 1 ! CLOCK_27 $end
+$var reg 1 " CLOCK_50 $end
+$var reg 36 # treg_GPIO_0 [35:0] $end
+$var reg 36 $ treg_GPIO_1 [35:0] $end
+$var reg 4 % KEY [3:0] $end
+$var reg 8 & treg_LCD_DATA [7:0] $end
+$var reg 18 ' SW [17:0] $end
+$var reg 1 ( UART_RXD $end
+$var wire 1 ) GPIO_0 [35] $end
+$var wire 1 * GPIO_0 [34] $end
+$var wire 1 + GPIO_0 [33] $end
+$var wire 1 , GPIO_0 [32] $end
+$var wire 1 - GPIO_0 [31] $end
+$var wire 1 . GPIO_0 [30] $end
+$var wire 1 / GPIO_0 [29] $end
+$var wire 1 0 GPIO_0 [28] $end
+$var wire 1 1 GPIO_0 [27] $end
+$var wire 1 2 GPIO_0 [26] $end
+$var wire 1 3 GPIO_0 [25] $end
+$var wire 1 4 GPIO_0 [24] $end
+$var wire 1 5 GPIO_0 [23] $end
+$var wire 1 6 GPIO_0 [22] $end
+$var wire 1 7 GPIO_0 [21] $end
+$var wire 1 8 GPIO_0 [20] $end
+$var wire 1 9 GPIO_0 [19] $end
+$var wire 1 : GPIO_0 [18] $end
+$var wire 1 ; GPIO_0 [17] $end
+$var wire 1 < GPIO_0 [16] $end
+$var wire 1 = GPIO_0 [15] $end
+$var wire 1 > GPIO_0 [14] $end
+$var wire 1 ? GPIO_0 [13] $end
+$var wire 1 @ GPIO_0 [12] $end
+$var wire 1 A GPIO_0 [11] $end
+$var wire 1 B GPIO_0 [10] $end
+$var wire 1 C GPIO_0 [9] $end
+$var wire 1 D GPIO_0 [8] $end
+$var wire 1 E GPIO_0 [7] $end
+$var wire 1 F GPIO_0 [6] $end
+$var wire 1 G GPIO_0 [5] $end
+$var wire 1 H GPIO_0 [4] $end
+$var wire 1 I GPIO_0 [3] $end
+$var wire 1 J GPIO_0 [2] $end
+$var wire 1 K GPIO_0 [1] $end
+$var wire 1 L GPIO_0 [0] $end
+$var wire 1 M GPIO_1 [35] $end
+$var wire 1 N GPIO_1 [34] $end
+$var wire 1 O GPIO_1 [33] $end
+$var wire 1 P GPIO_1 [32] $end
+$var wire 1 Q GPIO_1 [31] $end
+$var wire 1 R GPIO_1 [30] $end
+$var wire 1 S GPIO_1 [29] $end
+$var wire 1 T GPIO_1 [28] $end
+$var wire 1 U GPIO_1 [27] $end
+$var wire 1 V GPIO_1 [26] $end
+$var wire 1 W GPIO_1 [25] $end
+$var wire 1 X GPIO_1 [24] $end
+$var wire 1 Y GPIO_1 [23] $end
+$var wire 1 Z GPIO_1 [22] $end
+$var wire 1 [ GPIO_1 [21] $end
+$var wire 1 \ GPIO_1 [20] $end
+$var wire 1 ] GPIO_1 [19] $end
+$var wire 1 ^ GPIO_1 [18] $end
+$var wire 1 _ GPIO_1 [17] $end
+$var wire 1 ` GPIO_1 [16] $end
+$var wire 1 a GPIO_1 [15] $end
+$var wire 1 b GPIO_1 [14] $end
+$var wire 1 c GPIO_1 [13] $end
+$var wire 1 d GPIO_1 [12] $end
+$var wire 1 e GPIO_1 [11] $end
+$var wire 1 f GPIO_1 [10] $end
+$var wire 1 g GPIO_1 [9] $end
+$var wire 1 h GPIO_1 [8] $end
+$var wire 1 i GPIO_1 [7] $end
+$var wire 1 j GPIO_1 [6] $end
+$var wire 1 k GPIO_1 [5] $end
+$var wire 1 l GPIO_1 [4] $end
+$var wire 1 m GPIO_1 [3] $end
+$var wire 1 n GPIO_1 [2] $end
+$var wire 1 o GPIO_1 [1] $end
+$var wire 1 p GPIO_1 [0] $end
+$var wire 1 q HEX0 [0] $end
+$var wire 1 r HEX0 [1] $end
+$var wire 1 s HEX0 [2] $end
+$var wire 1 t HEX0 [3] $end
+$var wire 1 u HEX0 [4] $end
+$var wire 1 v HEX0 [5] $end
+$var wire 1 w HEX0 [6] $end
+$var wire 1 x HEX1 [0] $end
+$var wire 1 y HEX1 [1] $end
+$var wire 1 z HEX1 [2] $end
+$var wire 1 { HEX1 [3] $end
+$var wire 1 | HEX1 [4] $end
+$var wire 1 } HEX1 [5] $end
+$var wire 1 ~ HEX1 [6] $end
+$var wire 1 !! HEX2 [0] $end
+$var wire 1 "! HEX2 [1] $end
+$var wire 1 #! HEX2 [2] $end
+$var wire 1 $! HEX2 [3] $end
+$var wire 1 %! HEX2 [4] $end
+$var wire 1 &! HEX2 [5] $end
+$var wire 1 '! HEX2 [6] $end
+$var wire 1 (! HEX3 [0] $end
+$var wire 1 )! HEX3 [1] $end
+$var wire 1 *! HEX3 [2] $end
+$var wire 1 +! HEX3 [3] $end
+$var wire 1 ,! HEX3 [4] $end
+$var wire 1 -! HEX3 [5] $end
+$var wire 1 .! HEX3 [6] $end
+$var wire 1 /! HEX4 [0] $end
+$var wire 1 0! HEX4 [1] $end
+$var wire 1 1! HEX4 [2] $end
+$var wire 1 2! HEX4 [3] $end
+$var wire 1 3! HEX4 [4] $end
+$var wire 1 4! HEX4 [5] $end
+$var wire 1 5! HEX4 [6] $end
+$var wire 1 6! HEX5 [0] $end
+$var wire 1 7! HEX5 [1] $end
+$var wire 1 8! HEX5 [2] $end
+$var wire 1 9! HEX5 [3] $end
+$var wire 1 :! HEX5 [4] $end
+$var wire 1 ;! HEX5 [5] $end
+$var wire 1 <! HEX5 [6] $end
+$var wire 1 =! HEX6 [0] $end
+$var wire 1 >! HEX6 [1] $end
+$var wire 1 ?! HEX6 [2] $end
+$var wire 1 @! HEX6 [3] $end
+$var wire 1 A! HEX6 [4] $end
+$var wire 1 B! HEX6 [5] $end
+$var wire 1 C! HEX6 [6] $end
+$var wire 1 D! HEX7 [0] $end
+$var wire 1 E! HEX7 [1] $end
+$var wire 1 F! HEX7 [2] $end
+$var wire 1 G! HEX7 [3] $end
+$var wire 1 H! HEX7 [4] $end
+$var wire 1 I! HEX7 [5] $end
+$var wire 1 J! HEX7 [6] $end
+$var wire 1 K! LCD_BLON $end
+$var wire 1 L! LCD_DATA [7] $end
+$var wire 1 M! LCD_DATA [6] $end
+$var wire 1 N! LCD_DATA [5] $end
+$var wire 1 O! LCD_DATA [4] $end
+$var wire 1 P! LCD_DATA [3] $end
+$var wire 1 Q! LCD_DATA [2] $end
+$var wire 1 R! LCD_DATA [1] $end
+$var wire 1 S! LCD_DATA [0] $end
+$var wire 1 T! LCD_EN $end
+$var wire 1 U! LCD_ON $end
+$var wire 1 V! LCD_RS $end
+$var wire 1 W! LCD_RW $end
+$var wire 1 X! LEDG [8] $end
+$var wire 1 Y! LEDG [7] $end
+$var wire 1 Z! LEDG [6] $end
+$var wire 1 [! LEDG [5] $end
+$var wire 1 \! LEDG [4] $end
+$var wire 1 ]! LEDG [3] $end
+$var wire 1 ^! LEDG [2] $end
+$var wire 1 _! LEDG [1] $end
+$var wire 1 `! LEDG [0] $end
+$var wire 1 a! LEDR [17] $end
+$var wire 1 b! LEDR [16] $end
+$var wire 1 c! LEDR [15] $end
+$var wire 1 d! LEDR [14] $end
+$var wire 1 e! LEDR [13] $end
+$var wire 1 f! LEDR [12] $end
+$var wire 1 g! LEDR [11] $end
+$var wire 1 h! LEDR [10] $end
+$var wire 1 i! LEDR [9] $end
+$var wire 1 j! LEDR [8] $end
+$var wire 1 k! LEDR [7] $end
+$var wire 1 l! LEDR [6] $end
+$var wire 1 m! LEDR [5] $end
+$var wire 1 n! LEDR [4] $end
+$var wire 1 o! LEDR [3] $end
+$var wire 1 p! LEDR [2] $end
+$var wire 1 q! LEDR [1] $end
+$var wire 1 r! LEDR [0] $end
+$var wire 1 s! UART_TXD $end
+$var wire 1 t! sampler $end
+$scope module i1 $end
+$var wire 1 u! gnd $end
+$var wire 1 v! vcc $end
+$var wire 1 w! unknown $end
+$var tri1 1 x! devclrn $end
+$var tri1 1 y! devpor $end
+$var tri1 1 z! devoe $end
+$var wire 1 {! MyLCD|mDLY[1]~20_combout $end
+$var wire 1 |! MyLCD|mDLY[3]~24_combout $end
+$var wire 1 }! MyLCD|mDLY[5]~28_combout $end
+$var wire 1 ~! MyLCD|mDLY[12]~42_combout $end
+$var wire 1 !" MyLCD|mDLY[15]~48_combout $end
+$var wire 1 "" MyLCD|LessThan0~0_combout $end
+$var wire 1 #" MyLCD|Mux2~1_combout $end
+$var wire 1 $" MyLCD|u0|Selector2~1_combout $end
+$var wire 1 %" CLOCK_50~combout $end
+$var wire 1 &" CLOCK_50~clkctrl_outclk $end
+$var wire 1 '" MyLCD|LUT_INDEX[0]~7 $end
+$var wire 1 (" MyLCD|LUT_INDEX[1]~8_combout $end
+$var wire 1 )" ~GND~combout $end
+$var wire 1 *" MyLCD|LUT_INDEX[1]~9 $end
+$var wire 1 +" MyLCD|LUT_INDEX[2]~11 $end
+$var wire 1 ," MyLCD|LUT_INDEX[3]~12_combout $end
+$var wire 1 -" MyLCD|mLCD_ST.000000~0_combout $end
+$var wire 1 ." MyLCD|mLCD_ST.000000~regout $end
+$var wire 1 /" MyLCD|Selector2~0_combout $end
+$var wire 1 0" MyLCD|mDLY[0]~18_combout $end
+$var wire 1 1" MyLCD|mDLY[6]~31 $end
+$var wire 1 2" MyLCD|mDLY[7]~32_combout $end
+$var wire 1 3" MyLCD|mDLY[7]~33 $end
+$var wire 1 4" MyLCD|mDLY[8]~34_combout $end
+$var wire 1 5" MyLCD|mDLY[8]~35 $end
+$var wire 1 6" MyLCD|mDLY[9]~36_combout $end
+$var wire 1 7" MyLCD|mDLY[9]~37 $end
+$var wire 1 8" MyLCD|mDLY[10]~38_combout $end
+$var wire 1 9" MyLCD|mDLY[10]~39 $end
+$var wire 1 :" MyLCD|mDLY[11]~40_combout $end
+$var wire 1 ;" MyLCD|mDLY[11]~41 $end
+$var wire 1 <" MyLCD|mDLY[12]~43 $end
+$var wire 1 =" MyLCD|mDLY[13]~45 $end
+$var wire 1 >" MyLCD|mDLY[14]~46_combout $end
+$var wire 1 ?" MyLCD|mDLY[14]~47 $end
+$var wire 1 @" MyLCD|mDLY[15]~49 $end
+$var wire 1 A" MyLCD|mDLY[16]~51 $end
+$var wire 1 B" MyLCD|mDLY[17]~52_combout $end
+$var wire 1 C" MyLCD|LessThan0~5_combout $end
+$var wire 1 D" MyLCD|mDLY[0]~19 $end
+$var wire 1 E" MyLCD|mDLY[1]~21 $end
+$var wire 1 F" MyLCD|mDLY[2]~22_combout $end
+$var wire 1 G" MyLCD|mDLY[2]~23 $end
+$var wire 1 H" MyLCD|mDLY[3]~25 $end
+$var wire 1 I" MyLCD|mDLY[4]~26_combout $end
+$var wire 1 J" MyLCD|mDLY[4]~27 $end
+$var wire 1 K" MyLCD|mDLY[5]~29 $end
+$var wire 1 L" MyLCD|mDLY[6]~30_combout $end
+$var wire 1 M" MyLCD|LessThan0~1_combout $end
+$var wire 1 N" MyLCD|mDLY[16]~50_combout $end
+$var wire 1 O" MyLCD|mDLY[13]~44_combout $end
+$var wire 1 P" MyLCD|LessThan0~3_combout $end
+$var wire 1 Q" MyLCD|LessThan0~2_combout $end
+$var wire 1 R" MyLCD|LessThan0~4_combout $end
+$var wire 1 S" MyLCD|Selector2~1_combout $end
+$var wire 1 T" MyLCD|mLCD_ST.000001~regout $end
+$var wire 1 U" MyLCD|Selector0~0_combout $end
+$var wire 1 V" MyLCD|Selector0~1_combout $end
+$var wire 1 W" MyLCD|mLCD_Start~regout $end
+$var wire 1 X" MyLCD|u0|oDone~0_combout $end
+$var wire 1 Y" MyLCD|u0|ST.00~0_combout $end
+$var wire 1 Z" MyLCD|u0|preStart~feeder_combout $end
+$var wire 1 [" MyLCD|u0|preStart~regout $end
+$var wire 1 \" MyLCD|u0|mStart~0_combout $end
+$var wire 1 ]" MyLCD|u0|mStart~regout $end
+$var wire 1 ^" MyLCD|u0|ST.00~regout $end
+$var wire 1 _" MyLCD|u0|ST.01~0_combout $end
+$var wire 1 `" MyLCD|u0|ST.01~regout $end
+$var wire 1 a" MyLCD|u0|Selector4~0_combout $end
+$var wire 1 b" MyLCD|u0|Selector2~0_combout $end
+$var wire 1 c" MyLCD|u0|ST.10~regout $end
+$var wire 1 d" MyLCD|u0|Add0~0_combout $end
+$var wire 1 e" MyLCD|u0|Selector5~0_combout $end
+$var wire 1 f" MyLCD|u0|Selector8~0_combout $end
+$var wire 1 g" MyLCD|u0|Add0~1 $end
+$var wire 1 h" MyLCD|u0|Add0~2_combout $end
+$var wire 1 i" MyLCD|u0|Selector7~0_combout $end
+$var wire 1 j" MyLCD|u0|Add0~3 $end
+$var wire 1 k" MyLCD|u0|Add0~4_combout $end
+$var wire 1 l" MyLCD|u0|Selector6~0_combout $end
+$var wire 1 m" MyLCD|u0|Add0~5 $end
+$var wire 1 n" MyLCD|u0|Add0~6_combout $end
+$var wire 1 o" MyLCD|u0|Selector5~1_combout $end
+$var wire 1 p" MyLCD|u0|Add0~7 $end
+$var wire 1 q" MyLCD|u0|Add0~8_combout $end
+$var wire 1 r" MyLCD|u0|Selector4~1_combout $end
+$var wire 1 s" MyLCD|u0|ST~14_combout $end
+$var wire 1 t" MyLCD|u0|ST.11~regout $end
+$var wire 1 u" MyLCD|u0|oDone~1_combout $end
+$var wire 1 v" MyLCD|u0|oDone~regout $end
+$var wire 1 w" MyLCD|Selector3~0_combout $end
+$var wire 1 x" MyLCD|Selector3~1_combout $end
+$var wire 1 y" MyLCD|mLCD_ST.000010~regout $end
+$var wire 1 z" MyLCD|Selector4~0_combout $end
+$var wire 1 {" MyLCD|mLCD_ST.000011~regout $end
+$var wire 1 |" MyLCD|LUT_INDEX[3]~13 $end
+$var wire 1 }" MyLCD|LUT_INDEX[4]~15 $end
+$var wire 1 ~" MyLCD|LUT_INDEX[5]~16_combout $end
+$var wire 1 !# MyLCD|LUT_INDEX[2]~10_combout $end
+$var wire 1 "# MyLCD|LUT_INDEX[4]~14_combout $end
+$var wire 1 ## MyLCD|LessThan1~0_combout $end
+$var wire 1 $# MyLCD|LessThan1~1_combout $end
+$var wire 1 %# MyLCD|Mux6~0_combout $end
+$var wire 1 &# MyLCD|Mux6~1_combout $end
+$var wire 1 '# MyLCD|Mux5~0_combout $end
+$var wire 1 (# MyLCD|LUT_INDEX[0]~6_combout $end
+$var wire 1 )# MyLCD|Mux4~0_combout $end
+$var wire 1 *# MyLCD|Mux3~0_combout $end
+$var wire 1 +# MyLCD|Mux2~0_combout $end
+$var wire 1 ,# MyLCD|Mux2~2_combout $end
+$var wire 1 -# MyLCD|Mux2~3_combout $end
+$var wire 1 .# MyLCD|Mux2~4_combout $end
+$var wire 1 /# MyLCD|Mux1~0_combout $end
+$var wire 1 0# MyLCD|Mux1~1_combout $end
+$var wire 1 1# MyLCD|Mux0~0_combout $end
+$var wire 1 2# MyLCD|Mux0~1_combout $end
+$var wire 1 3# MyLCD|LUT_DATA~0_combout $end
+$var wire 1 4# MyLCD|LUT_DATA~1_combout $end
+$var wire 1 5# Multiplexador|out[0]~0_combout $end
+$var wire 1 6# Multiplexador|out[1]~1_combout $end
+$var wire 1 7# Multiplexador|out[2]~2_combout $end
+$var wire 1 8# Multiplexador|out[3]~3_combout $end
+$var wire 1 9# Multiplexador|out[4]~4_combout $end
+$var wire 1 :# Multiplexador|out[5]~5_combout $end
+$var wire 1 ;# Multiplexador|out[6]~6_combout $end
+$var wire 1 <# Multiplexador|out[7]~7_combout $end
+$var wire 1 =# MyLCD|u0|Selector3~0_combout $end
+$var wire 1 ># MyLCD|u0|LCD_EN~regout $end
+$var wire 1 ?# MyLCD|WideOr0~0_combout $end
+$var wire 1 @# MyLCD|WideOr0~1_combout $end
+$var wire 1 A# MyLCD|mLCD_RS~regout $end
+$var wire 1 B# MyLCD|u0|Cont [4] $end
+$var wire 1 C# MyLCD|u0|Cont [3] $end
+$var wire 1 D# MyLCD|u0|Cont [2] $end
+$var wire 1 E# MyLCD|u0|Cont [1] $end
+$var wire 1 F# MyLCD|u0|Cont [0] $end
+$var wire 1 G# MyLCD|mDLY [17] $end
+$var wire 1 H# MyLCD|mDLY [16] $end
+$var wire 1 I# MyLCD|mDLY [15] $end
+$var wire 1 J# MyLCD|mDLY [14] $end
+$var wire 1 K# MyLCD|mDLY [13] $end
+$var wire 1 L# MyLCD|mDLY [12] $end
+$var wire 1 M# MyLCD|mDLY [11] $end
+$var wire 1 N# MyLCD|mDLY [10] $end
+$var wire 1 O# MyLCD|mDLY [9] $end
+$var wire 1 P# MyLCD|mDLY [8] $end
+$var wire 1 Q# MyLCD|mDLY [7] $end
+$var wire 1 R# MyLCD|mDLY [6] $end
+$var wire 1 S# MyLCD|mDLY [5] $end
+$var wire 1 T# MyLCD|mDLY [4] $end
+$var wire 1 U# MyLCD|mDLY [3] $end
+$var wire 1 V# MyLCD|mDLY [2] $end
+$var wire 1 W# MyLCD|mDLY [1] $end
+$var wire 1 X# MyLCD|mDLY [0] $end
+$var wire 1 Y# MyLCD|mLCD_DATA [7] $end
+$var wire 1 Z# MyLCD|mLCD_DATA [6] $end
+$var wire 1 [# MyLCD|mLCD_DATA [5] $end
+$var wire 1 \# MyLCD|mLCD_DATA [4] $end
+$var wire 1 ]# MyLCD|mLCD_DATA [3] $end
+$var wire 1 ^# MyLCD|mLCD_DATA [2] $end
+$var wire 1 _# MyLCD|mLCD_DATA [1] $end
+$var wire 1 `# MyLCD|mLCD_DATA [0] $end
+$var wire 1 a# MyLCD|LUT_INDEX [5] $end
+$var wire 1 b# MyLCD|LUT_INDEX [4] $end
+$var wire 1 c# MyLCD|LUT_INDEX [3] $end
+$var wire 1 d# MyLCD|LUT_INDEX [2] $end
+$var wire 1 e# MyLCD|LUT_INDEX [1] $end
+$var wire 1 f# MyLCD|LUT_INDEX [0] $end
+$var wire 1 g# SW~combout [17] $end
+$var wire 1 h# SW~combout [16] $end
+$var wire 1 i# SW~combout [15] $end
+$var wire 1 j# SW~combout [14] $end
+$var wire 1 k# SW~combout [13] $end
+$var wire 1 l# SW~combout [12] $end
+$var wire 1 m# SW~combout [11] $end
+$var wire 1 n# SW~combout [10] $end
+$var wire 1 o# SW~combout [9] $end
+$var wire 1 p# SW~combout [8] $end
+$var wire 1 q# SW~combout [7] $end
+$var wire 1 r# SW~combout [6] $end
+$var wire 1 s# SW~combout [5] $end
+$var wire 1 t# SW~combout [4] $end
+$var wire 1 u# SW~combout [3] $end
+$var wire 1 v# SW~combout [2] $end
+$var wire 1 w# SW~combout [1] $end
+$var wire 1 x# SW~combout [0] $end
+$var wire 1 y# KEY~combout [3] $end
+$var wire 1 z# KEY~combout [2] $end
+$var wire 1 {# KEY~combout [1] $end
+$var wire 1 |# KEY~combout [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x!
+x"
+bx #
+bx $
+bx %
+bx &
+b0x0001100110010110 '
+x(
+xL
+xK
+xJ
+xI
+xH
+xG
+xF
+xE
+xD
+xC
+xB
+xA
+x@
+x?
+x>
+x=
+x<
+x;
+x:
+x9
+x8
+x7
+x6
+x5
+x4
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+x+
+x*
+x)
+xp
+xo
+xn
+xm
+xl
+xk
+xj
+xi
+xh
+xg
+xf
+xe
+xd
+xc
+xb
+xa
+x`
+x_
+x^
+x]
+x\
+x[
+xZ
+xY
+xX
+xW
+xV
+xU
+xT
+xS
+xR
+xQ
+xP
+xO
+xN
+xM
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0'!
+0&!
+0%!
+0$!
+0#!
+0"!
+0!!
+0.!
+0-!
+0,!
+0+!
+0*!
+0)!
+0(!
+05!
+04!
+03!
+02!
+01!
+00!
+0/!
+0<!
+0;!
+0:!
+09!
+08!
+07!
+06!
+0C!
+0B!
+0A!
+0@!
+0?!
+0>!
+0=!
+0J!
+0I!
+0H!
+0G!
+0F!
+0E!
+0D!
+1K!
+xS!
+xR!
+xQ!
+xP!
+xO!
+xN!
+xM!
+xL!
+0T!
+1U!
+0V!
+0W!
+0`!
+0_!
+0^!
+0]!
+0\!
+0[!
+0Z!
+0Y!
+0X!
+0r!
+1q!
+1p!
+0o!
+1n!
+0m!
+0l!
+1k!
+0j!
+0i!
+0h!
+0g!
+0f!
+0e!
+0d!
+0c!
+0b!
+0a!
+0s!
+xt!
+0u!
+1v!
+xw!
+1x!
+1y!
+1z!
+0{!
+0|!
+0}!
+0~!
+0!"
+0""
+0#"
+0$"
+x%"
+x&"
+0'"
+0("
+0)"
+1*"
+0+"
+0,"
+1-"
+0."
+1/"
+10"
+01"
+02"
+13"
+04"
+05"
+06"
+17"
+08"
+09"
+0:"
+1;"
+0<"
+1="
+0>"
+0?"
+1@"
+0A"
+0B"
+0C"
+0D"
+1E"
+0F"
+0G"
+1H"
+0I"
+0J"
+1K"
+0L"
+0M"
+0N"
+0O"
+0P"
+0Q"
+0R"
+1S"
+0T"
+0U"
+1V"
+0W"
+0X"
+1Y"
+0Z"
+0["
+0\"
+0]"
+0^"
+1_"
+0`"
+0a"
+0b"
+0c"
+1d"
+1e"
+0f"
+0g"
+0h"
+0i"
+1j"
+0k"
+0l"
+0m"
+0n"
+0o"
+1p"
+0q"
+0r"
+0s"
+0t"
+0u"
+0v"
+0w"
+0x"
+0y"
+0z"
+0{"
+1|"
+0}"
+0~"
+0!#
+0"#
+1##
+0$#
+1%#
+0&#
+0'#
+1(#
+0)#
+1*#
+0+#
+0,#
+0-#
+1.#
+0/#
+10#
+01#
+02#
+03#
+04#
+05#
+16#
+17#
+08#
+19#
+0:#
+0;#
+1<#
+0=#
+0>#
+0?#
+0@#
+0A#
+0F#
+0E#
+0D#
+0C#
+0B#
+0X#
+0W#
+0V#
+0U#
+0T#
+0S#
+0R#
+0Q#
+0P#
+0O#
+0N#
+0M#
+0L#
+0K#
+0J#
+0I#
+0H#
+0G#
+0`#
+0_#
+0^#
+0]#
+0\#
+0[#
+0Z#
+0Y#
+0f#
+0e#
+0d#
+0c#
+0b#
+0a#
+0x#
+1w#
+1v#
+0u#
+1t#
+0s#
+0r#
+1q#
+1p#
+0o#
+0n#
+1m#
+1l#
+0k#
+0j#
+0i#
+zh#
+0g#
+x|#
+z{#
+zz#
+zy#
+$end
+#60000
+b0x0001100110010010 '
+b0x0001100110110010 '
+b0x0001100111110010 '
+b0x0001100101110010 '
+b0x0001100001110010 '
+b0x0001101001110010 '
+b0x0001001001110010 '
+b0x0011001001110010 '
+b0x0111001001110010 '
+b0x1111001001110010 '
+0v#
+1s#
+1r#
+0q#
+0p#
+1o#
+0m#
+1k#
+1j#
+1i#
+0t!
+07#
+1:#
+1;#
+0<#
+0p!
+1m!
+1l!
+0k!
+#120000
+b0x1111011001110010 '
+b0x1111011000110010 '
+b0x1111011010110010 '
+b0x0111011010110010 '
+0r#
+1q#
+1n#
+0i#
+1t!
+0;#
+1<#
+0l!
+1k!
+#160000
+b1x0111011010110010 '
+1g#
+0t!
+0<#
+1;#
+17#
+0k!
+1l!
+1p!
+#180000
+b1x0111011010110000 '
+b1x0111011010111000 '
+b1x0111011010101000 '
+b1x0111011010101100 '
+b1x0111011110101100 '
+b1x0111111110101100 '
+b1x0101111110101100 '
+b1x0101101110101100 '
+b1x1101101110101100 '
+0w#
+1v#
+1u#
+0t#
+1p#
+0n#
+1m#
+0k#
+1i#
+1t!
+07#
+18#
+15#
+0:#
+1<#
+0p!
+1o!
+1r!
+0m!
+1k!
+#240000
+b1x1101101110101101 '
+b1x1100101110101101 '
+b1x1100101110001101 '
+b1x1000101110001101 '
+b1x1000101100001101 '
+b0x1000101100001101 '
+b0x1000101100001111 '
+b0x1000101100011111 '
+b0x1000001100011111 '
+b0x0000001100011111 '
+1x#
+1w#
+1t#
+0s#
+0q#
+0m#
+0l#
+0j#
+0i#
+0g#
+0t!
+0<#
+0;#
+17#
+0k!
+0l!
+1p!
+#300000
+b0x0000001101011111 '
+b0x0000001101010111 '
+b0x0000001001010111 '
+b0x0010001001010111 '
+b0x0010011001010111 '
+b0x0010011001010110 '
+b0x0011011001010110 '
+b0x0011011001010100 '
+b0x0011011001000100 '
+0x#
+0w#
+0u#
+0t#
+1r#
+0p#
+1n#
+1l#
+1k#
+1t!
+05#
+06#
+08#
+09#
+1;#
+0r!
+0q!
+0o!
+0n!
+1l!
+#360000
+b0x0011011001000000 '
+b0x0011011011000000 '
+b0x1011011011000000 '
+b0x1011011010000000 '
+b0x1010011010000000 '
+b0x1010011010000010 '
+1w#
+0v#
+0r#
+1q#
+0l#
+1i#
+0t!
+16#
+07#
+0;#
+1<#
+1q!
+0p!
+0l!
+1k!
+#420000
+b0x1010010010000010 '
+b0x1010010010100010 '
+b0x1010010110100010 '
+b0x1010010110100011 '
+b0x1010010110110011 '
+b0x1010010110110111 '
+b0x1010010110110101 '
+1x#
+0w#
+1v#
+1t#
+1s#
+1p#
+0o#
+1t!
+15#
+06#
+17#
+19#
+1:#
+1r!
+0q!
+1p!
+1n!
+1m!
+#480000
+b0x1010110110110101 '
+b0x1010100110110101 '
+b0x1010100100110101 '
+b0x1010100101110101 '
+b0x1011100101110101 '
+b0x1011100101010101 '
+b0x1011100101010100 '
+b0x1011100101010110 '
+0x#
+1w#
+0s#
+1r#
+0q#
+0n#
+1m#
+1l#
+0t!
+05#
+16#
+0:#
+1;#
+0<#
+0r!
+1q!
+0m!
+1l!
+0k!
+#540000
+b0x1111100101010110 '
+b0x1111100101011110 '
+b0x0111100101011110 '
+b0x0111100001011110 '
+b0x0111100001011010 '
+b0x0111000001011010 '
+b0x0111010001011010 '
+b0x0111010011011010 '
+b0x0111010010011010 '
+0v#
+1u#
+0r#
+1q#
+0p#
+1n#
+0m#
+1j#
+0i#
+1t!
+07#
+18#
+0;#
+1<#
+0p!
+1o!
+0l!
+1k!
+#600000
+b0x0111011010011010 '
+b0x0111011010001010 '
+b0x0110011010001010 '
+b0x0010011010001010 '
+b0x0010011010000010 '
+b0x0010001010000010 '
+b0x0010001000000010 '
+b0x0010001001000010 '
+0u#
+0t#
+1r#
+0q#
+1o#
+0n#
+0l#
+0j#
+0t!
+08#
+09#
+1;#
+0<#
+0o!
+0n!
+1l!
+0k!
+#660000
+b0x0000001001000010 '
+b0x0000001001000011 '
+b0x0000001001000111 '
+b0x0000101001000111 '
+b0x0100101001000111 '
+b0x0100111001000111 '
+1x#
+1v#
+1n#
+1m#
+0k#
+1j#
+1t!
+15#
+17#
+1r!
+1p!
+#720000
+b1x0100111001000111 '
+b1x1100111001000111 '
+b1x1100110001000111 '
+b1x1100110001010111 '
+b1x1101110001010111 '
+b1x1101110001011111 '
+b1x1101110011011111 '
+b1x1101110011011011 '
+0v#
+1u#
+1t#
+1q#
+0o#
+1l#
+1i#
+1g#
+0t!
+18#
+19#
+1<#
+06#
+05#
+1o!
+1n!
+1k!
+0q!
+0r!
+#780000
+b1x1101110011111011 '
+b1x1101110011111001 '
+b1x1101110111111001 '
+b1x1101110110111001 '
+b1x1101110110111000 '
+b1x1101010110111000 '
+b1x1001010110111000 '
+b1x1001011110111000 '
+b1x1001011110101000 '
+b1x1001011110100000 '
+b1x1001011100100000 '
+b1x1001011100100100 '
+0x#
+0w#
+1v#
+0u#
+0t#
+1s#
+0r#
+0q#
+1p#
+1o#
+0m#
+0j#
+1t!
+15#
+16#
+08#
+0;#
+1r!
+1q!
+0o!
+0l!
+#800000
+b0x1001011100100100 '
+0g#
+0t!
+0<#
+1:#
+09#
+06#
+05#
+0k!
+1m!
+0n!
+0q!
+0r!
+#840000
+b0x1011011100100100 '
+b0x0011011100100100 '
+b0x0010011100100100 '
+b0x0010011100000100 '
+b0x0010011000000100 '
+b0x0010111000000100 '
+b0x0010111010000100 '
+b0x0010111010000000 '
+0v#
+0s#
+1q#
+0p#
+1m#
+0l#
+1k#
+0i#
+1t!
+07#
+0:#
+1<#
+0p!
+0m!
+1k!
+#880000
+b1x0010111010000000 '
+1g#
+0t!
+0<#
+1:#
+18#
+17#
+16#
+0k!
+1m!
+1o!
+1p!
+1q!
+#900000
+b1x0010101010000000 '
+b1x0010101010000001 '
+b1x0000101010000001 '
+b1x1000101010000001 '
+b1x1000101010100001 '
+b1x1000001010100001 '
+b1x1000001000100001 '
+1x#
+1s#
+0q#
+0n#
+0m#
+0k#
+1i#
+1t!
+0:#
+1<#
+07#
+08#
+0m!
+1k!
+0p!
+0o!
+#960000
+b1x1100001000100001 '
+b1x1100000000100001 '
+b1x1100000000110001 '
+b1x1100000000111001 '
+b1x1100000100111001 '
+b1x1110000100111001 '
+b1x1110000100011001 '
+b1x1110000110011001 '
+1u#
+1t#
+0s#
+1q#
+1p#
+0o#
+1k#
+1j#
+0t!
+1:#
+15#
+06#
+1;#
+1m!
+1r!
+0q!
+1l!
+#1000000

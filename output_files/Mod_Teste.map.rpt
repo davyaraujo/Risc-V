@@ -1,0 +1,687 @@
+Analysis & Synthesis report for Mod_Teste
+Fri Sep 29 11:07:59 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Mod_Teste|LCD_TEST:MyLCD|mLCD_ST
+  9. State Machine - |Mod_Teste|LCD_TEST:MyLCD|LCD_Controller:u0|ST
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: LCD_TEST:MyLCD
+ 16. Parameter Settings for User Entity Instance: LCD_TEST:MyLCD|LCD_Controller:u0
+ 17. Port Connectivity Checks: "somador4bits:teste_somador"
+ 18. Port Connectivity Checks: "MUX4x1:muxinhoMuxImmSrc"
+ 19. Port Connectivity Checks: "MUX4x1:muxinhoMuxResSrc"
+ 20. Port Connectivity Checks: "registrador:regi"
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Sep 29 11:07:59 2023           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; Mod_Teste                                       ;
+; Top-level Entity Name              ; Mod_Teste                                       ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 4,278                                           ;
+;     Total combinational functions  ; 2,181                                           ;
+;     Dedicated logic registers      ; 2,196                                           ;
+; Total registers                    ; 2196                                            ;
+; Total pins                         ; 194                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; Mod_Teste          ; Mod_Teste          ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; Mod_Teste.v                      ; yes             ; User Verilog HDL File  ; E:/LASD/2020.1/DAVYARAUJO_120110402/Mod_Teste.v      ;         ;
+; LCD_TEST2.v                      ; yes             ; User Verilog HDL File  ; E:/LASD/2020.1/DAVYARAUJO_120110402/LCD_TEST2.v      ;         ;
+; LCD_Controller.v                 ; yes             ; User Verilog HDL File  ; E:/LASD/2020.1/DAVYARAUJO_120110402/LCD_Controller.v ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                     ;
++---------------------------------------------+-----------------------------------+
+; Resource                                    ; Usage                             ;
++---------------------------------------------+-----------------------------------+
+; Estimated Total logic elements              ; 4,278                             ;
+;                                             ;                                   ;
+; Total combinational functions               ; 2181                              ;
+; Logic element usage by number of LUT inputs ;                                   ;
+;     -- 4 input functions                    ; 1611                              ;
+;     -- 3 input functions                    ; 431                               ;
+;     -- <=2 input functions                  ; 139                               ;
+;                                             ;                                   ;
+; Logic elements by mode                      ;                                   ;
+;     -- normal mode                          ; 2051                              ;
+;     -- arithmetic mode                      ; 130                               ;
+;                                             ;                                   ;
+; Total registers                             ; 2196                              ;
+;     -- Dedicated logic registers            ; 2196                              ;
+;     -- I/O registers                        ; 0                                 ;
+;                                             ;                                   ;
+; I/O pins                                    ; 194                               ;
+; Embedded Multiplier 9-bit elements          ; 0                                 ;
+; Maximum fan-out node                        ; clock_divider:teste_clock|clk_1hz ;
+; Maximum fan-out                             ; 2119                              ;
+; Total fan-out                               ; 16768                             ;
+; Average fan-out                             ; 3.67                              ;
++---------------------------------------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+; |Mod_Teste                      ; 2181 (1)          ; 2196 (0)     ; 0           ; 0            ; 0       ; 0         ; 194  ; 0            ; |Mod_Teste                                  ; work         ;
+;    |LCD_TEST:MyLCD|             ; 307 (286)         ; 51 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|LCD_TEST:MyLCD                   ; work         ;
+;       |LCD_Controller:u0|       ; 21 (21)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|LCD_TEST:MyLCD|LCD_Controller:u0 ; work         ;
+;    |MUX2x1:muxinhoULArc|        ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|MUX2x1:muxinhoULArc              ; work         ;
+;    |MUX4x1:muxinhoMuxResSrc|    ; 1385 (1385)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|MUX4x1:muxinhoMuxResSrc          ; work         ;
+;    |Memoria_instrucao:teste_MI| ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|Memoria_instrucao:teste_MI       ; work         ;
+;    |ProgamCounter:teste_PC|     ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|ProgamCounter:teste_PC           ; work         ;
+;    |RAM:ranzinha|               ; 280 (280)         ; 2048 (2048)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|RAM:ranzinha                     ; work         ;
+;    |ULA:ulinha|                 ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|ULA:ulinha                       ; work         ;
+;    |Unidade_controle:teste_UC|  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|Unidade_controle:teste_UC        ; work         ;
+;    |clock_divider:teste_clock|  ; 44 (44)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|clock_divider:teste_clock        ; work         ;
+;    |hex_to_7seg:teste_hex2|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|hex_to_7seg:teste_hex2           ; work         ;
+;    |hex_to_7seg:teste_hex3|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|hex_to_7seg:teste_hex3           ; work         ;
+;    |hex_to_7seg:teste_hex5|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|hex_to_7seg:teste_hex5           ; work         ;
+;    |hex_to_7seg:teste_hex6|     ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|hex_to_7seg:teste_hex6           ; work         ;
+;    |hex_to_7seg:teste_hex7|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|hex_to_7seg:teste_hex7           ; work         ;
+;    |parallel_out:out|           ; 1 (1)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|parallel_out:out                 ; work         ;
+;    |parrallel_in:in|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|parrallel_in:in                  ; work         ;
+;    |registrador:regi|           ; 64 (64)           ; 56 (56)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Mod_Teste|registrador:regi                 ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------+
+; State Machine - |Mod_Teste|LCD_TEST:MyLCD|mLCD_ST                                  ;
++----------------+----------------+----------------+----------------+----------------+
+; Name           ; mLCD_ST.000011 ; mLCD_ST.000010 ; mLCD_ST.000001 ; mLCD_ST.000000 ;
++----------------+----------------+----------------+----------------+----------------+
+; mLCD_ST.000000 ; 0              ; 0              ; 0              ; 0              ;
+; mLCD_ST.000001 ; 0              ; 0              ; 1              ; 1              ;
+; mLCD_ST.000010 ; 0              ; 1              ; 0              ; 1              ;
+; mLCD_ST.000011 ; 1              ; 0              ; 0              ; 1              ;
++----------------+----------------+----------------+----------------+----------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------+
+; State Machine - |Mod_Teste|LCD_TEST:MyLCD|LCD_Controller:u0|ST ;
++-------+-------+-------+-------+--------------------------------+
+; Name  ; ST.11 ; ST.10 ; ST.01 ; ST.00                          ;
++-------+-------+-------+-------+--------------------------------+
+; ST.00 ; 0     ; 0     ; 0     ; 0                              ;
+; ST.01 ; 0     ; 0     ; 1     ; 1                              ;
+; ST.10 ; 0     ; 1     ; 0     ; 1                              ;
+; ST.11 ; 1     ; 0     ; 0     ; 1                              ;
++-------+-------+-------+-------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Memoria_instrucao:teste_MI|RD1[5]                   ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[7]                   ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[4]                   ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[8]                   ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[9]                   ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[10]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[11]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[12]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[13]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[14]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[15]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[17]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[20]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[21]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[22]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[23]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[24]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[25]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[26]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Memoria_instrucao:teste_MI|RD1[27]                  ; Memoria_instrucao:teste_MI|WideOr1 ; yes                    ;
+; Number of user-specified and inferred latches = 20  ;                                    ;                        ;
++-----------------------------------------------------+------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; ProgamCounter:teste_PC|PC[1]           ; Merged with ProgamCounter:teste_PC|PC[0]    ;
+; ProgamCounter:teste_PC|PC[0]           ; Stuck at GND due to stuck port data_in      ;
+; registrador:regi|registradores[0][7]   ; Stuck at GND due to stuck port clock_enable ;
+; registrador:regi|registradores[0][6]   ; Stuck at GND due to stuck port clock_enable ;
+; registrador:regi|registradores[0][5]   ; Stuck at GND due to stuck port clock_enable ;
+; registrador:regi|registradores[0][4]   ; Stuck at GND due to stuck port clock_enable ;
+; registrador:regi|registradores[0][3]   ; Stuck at GND due to stuck port clock_enable ;
+; registrador:regi|registradores[0][2]   ; Stuck at GND due to stuck port clock_enable ;
+; registrador:regi|registradores[0][1]   ; Stuck at GND due to stuck port clock_enable ;
+; registrador:regi|registradores[0][0]   ; Stuck at GND due to stuck port clock_enable ;
+; LCD_TEST:MyLCD|mLCD_ST~8               ; Lost fanout                                 ;
+; LCD_TEST:MyLCD|mLCD_ST~9               ; Lost fanout                                 ;
+; LCD_TEST:MyLCD|mLCD_ST~10              ; Lost fanout                                 ;
+; LCD_TEST:MyLCD|mLCD_ST~11              ; Lost fanout                                 ;
+; LCD_TEST:MyLCD|mLCD_ST~12              ; Lost fanout                                 ;
+; LCD_TEST:MyLCD|mLCD_ST~13              ; Lost fanout                                 ;
+; LCD_TEST:MyLCD|LCD_Controller:u0|ST~8  ; Lost fanout                                 ;
+; LCD_TEST:MyLCD|LCD_Controller:u0|ST~9  ; Lost fanout                                 ;
+; Total Number of Removed Registers = 18 ;                                             ;
++----------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                            ;
++------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name                ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++------------------------------+---------------------------+-----------------------------------------------------------------------------+
+; ProgamCounter:teste_PC|PC[0] ; Stuck at GND              ; registrador:regi|registradores[0][7], registrador:regi|registradores[0][6], ;
+;                              ; due to stuck port data_in ; registrador:regi|registradores[0][5], registrador:regi|registradores[0][4], ;
+;                              ;                           ; registrador:regi|registradores[0][3], registrador:regi|registradores[0][2], ;
+;                              ;                           ; registrador:regi|registradores[0][1], registrador:regi|registradores[0][0]  ;
++------------------------------+---------------------------+-----------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2196  ;
+; Number of registers using Synchronous Clear  ; 18    ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 2169  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2155  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Mod_Teste|LCD_TEST:MyLCD|LCD_Controller:u0|oDone ;
+; 64:1               ; 3 bits    ; 126 LEs       ; 60 LEs               ; 66 LEs                 ; Yes        ; |Mod_Teste|LCD_TEST:MyLCD|mLCD_DATA[2]            ;
+; 39:1               ; 2 bits    ; 52 LEs        ; 34 LEs               ; 18 LEs                 ; Yes        ; |Mod_Teste|LCD_TEST:MyLCD|mLCD_DATA[0]            ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Mod_Teste|registrador:regi|Mux1                  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Mod_Teste|MUX2x1:muxinhoULArc|saida[0]           ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |Mod_Teste|registrador:regi|Mux14                 ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; No         ; |Mod_Teste|ULA:ulinha|Mux4                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Mod_Teste|LCD_TEST:MyLCD|Mux6                    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Mod_Teste|LCD_TEST:MyLCD|Selector1               ;
+; 258:1              ; 8 bits    ; 1376 LEs      ; 1376 LEs             ; 0 LEs                  ; No         ; |Mod_Teste|MUX4x1:muxinhoMuxResSrc|Mux5           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LCD_TEST:MyLCD ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; LCD_INTIAL     ; 0     ; Signed Integer                     ;
+; LCD_RESTART    ; 4     ; Signed Integer                     ;
+; LCD_LINE1      ; 5     ; Signed Integer                     ;
+; LCD_CH_LINE    ; 21    ; Signed Integer                     ;
+; LCD_LINE2      ; 22    ; Signed Integer                     ;
+; LUT_SIZE       ; 37    ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LCD_TEST:MyLCD|LCD_Controller:u0 ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; CLK_Divide     ; 16    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "somador4bits:teste_somador"                                                                                                                 ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                   ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+; B       ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "B[7..3]" will be connected to GND. ;
+; B[1..0] ; Input ; Info     ; Stuck at GND                                                                                                                              ;
+; B[7]    ; Input ; Info     ; Stuck at VCC                                                                                                                              ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX4x1:muxinhoMuxImmSrc"                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                                                                                                                                            ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in0    ; Input ; Warning  ; Input port expression (12 bits) is wider than the input port (8 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; in1    ; Input ; Warning  ; Input port expression (12 bits) is wider than the input port (8 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; in2    ; Input ; Warning  ; Input port expression (12 bits) is wider than the input port (8 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; in2[0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; in3    ; Input ; Warning  ; Input port expression (21 bits) is wider than the input port (8 bits) it drives.  The 13 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; in3[0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++--------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MUX4x1:muxinhoMuxResSrc"                                                                                                                                                               ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in3       ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (8 bits) it drives.  The 24 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; in3[7..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registrador:regi"                                                                                                                                                               ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; wa3  ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (3 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ra1  ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (3 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; ra2  ; Input ; Warning  ; Input port expression (5 bits) is wider than the input port (3 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:09     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Sep 29 11:07:47 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Mod_Teste -c Mod_Teste
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 15 design units, including 15 entities, in source file mod_teste.v
+    Info (12023): Found entity 1: Mod_Teste
+    Info (12023): Found entity 2: registrador
+    Info (12023): Found entity 3: MUX2x1
+    Info (12023): Found entity 4: MUX4x1
+    Info (12023): Found entity 5: ULA
+    Info (12023): Found entity 6: hex_to_7seg
+    Info (12023): Found entity 7: Unidade_controle
+    Info (12023): Found entity 8: ProgamCounter
+    Info (12023): Found entity 9: Memoria_instrucao
+    Info (12023): Found entity 10: somador4bits
+    Info (12023): Found entity 11: RAM
+    Info (12023): Found entity 12: clock_divider
+    Info (12023): Found entity 13: counter
+    Info (12023): Found entity 14: parallel_out
+    Info (12023): Found entity 15: parrallel_in
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_test2.v
+    Info (12023): Found entity 1: LCD_TEST
+Info (12021): Found 1 design units, including 1 entities, in source file lcd_controller.v
+    Info (12023): Found entity 1: LCD_Controller
+Info (12021): Found 0 design units, including 0 entities, in source file verilog1.v
+Info (12127): Elaborating entity "Mod_Teste" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(90): truncated value with size 2 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(93): truncated value with size 2 to match size of target (1)
+Warning (10034): Output port "LEDG" at Mod_Teste.v(10) has no driver
+Warning (10034): Output port "LEDR[17..9]" at Mod_Teste.v(11) has no driver
+Warning (10034): Output port "UART_TXD" at Mod_Teste.v(13) has no driver
+Info (12128): Elaborating entity "LCD_TEST" for hierarchy "LCD_TEST:MyLCD"
+Warning (10230): Verilog HDL assignment warning at LCD_TEST2.v(60): truncated value with size 32 to match size of target (18)
+Warning (10230): Verilog HDL assignment warning at LCD_TEST2.v(69): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at LCD_TEST2.v(71): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "LCD_Controller" for hierarchy "LCD_TEST:MyLCD|LCD_Controller:u0"
+Warning (10230): Verilog HDL assignment warning at LCD_Controller.v(66): truncated value with size 32 to match size of target (5)
+Info (12128): Elaborating entity "registrador" for hierarchy "registrador:regi"
+Warning (10240): Verilog HDL Always Construct warning at Mod_Teste.v(122): inferring latch(es) for variable "count", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "ProgamCounter" for hierarchy "ProgamCounter:teste_PC"
+Info (12128): Elaborating entity "Memoria_instrucao" for hierarchy "Memoria_instrucao:teste_MI"
+Warning (10270): Verilog HDL Case Statement warning at Mod_Teste.v(264): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at Mod_Teste.v(264): inferring latch(es) for variable "RD1", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "RD1[0]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[1]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[2]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[3]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[4]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[5]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[6]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[7]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[8]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[9]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[10]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[11]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[12]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[13]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[14]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[15]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[16]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[17]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[18]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[19]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[20]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[21]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[22]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[23]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[24]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[25]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[26]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[27]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[28]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[29]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[30]" at Mod_Teste.v(264)
+Info (10041): Inferred latch for "RD1[31]" at Mod_Teste.v(264)
+Info (12128): Elaborating entity "Unidade_controle" for hierarchy "Unidade_controle:teste_UC"
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(235): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(236): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(237): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(238): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(239): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(242): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(243): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(244): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(244): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(246): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(246): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(246): truncated value with size 32 to match size of target (2)
+Info (12128): Elaborating entity "hex_to_7seg" for hierarchy "hex_to_7seg:teste_hex1"
+Info (12128): Elaborating entity "MUX2x1" for hierarchy "MUX2x1:muxinhoULArc"
+Info (12128): Elaborating entity "MUX4x1" for hierarchy "MUX4x1:muxinhoPCSrc"
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(171): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ulinha"
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(186): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "somador4bits" for hierarchy "somador4bits:teste_somador"
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:ranzinha"
+Warning (10240): Verilog HDL Always Construct warning at Mod_Teste.v(296): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "parrallel_in" for hierarchy "parrallel_in:in"
+Info (12128): Elaborating entity "parallel_out" for hierarchy "parallel_out:out"
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:teste_clock"
+Warning (10230): Verilog HDL assignment warning at Mod_Teste.v(320): truncated value with size 32 to match size of target (26)
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[0]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[1]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[2]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[3]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[4]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[5]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[6]" and its non-tri-state driver.
+    Warning (13035): Inserted always-enabled tri-state buffer between "LCD_DATA[7]" and its non-tri-state driver.
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "Memoria_instrucao:teste_MI|RD1[11]" merged with LATCH primitive "Memoria_instrucao:teste_MI|RD1[10]"
+    Info (13026): Duplicate LATCH primitive "Memoria_instrucao:teste_MI|RD1[14]" merged with LATCH primitive "Memoria_instrucao:teste_MI|RD1[12]"
+    Info (13026): Duplicate LATCH primitive "Memoria_instrucao:teste_MI|RD1[13]" merged with LATCH primitive "Memoria_instrucao:teste_MI|RD1[12]"
+    Info (13026): Duplicate LATCH primitive "Memoria_instrucao:teste_MI|RD1[24]" merged with LATCH primitive "Memoria_instrucao:teste_MI|RD1[21]"
+    Info (13026): Duplicate LATCH primitive "Memoria_instrucao:teste_MI|RD1[23]" merged with LATCH primitive "Memoria_instrucao:teste_MI|RD1[21]"
+    Info (13026): Duplicate LATCH primitive "Memoria_instrucao:teste_MI|RD1[27]" merged with LATCH primitive "Memoria_instrucao:teste_MI|RD1[25]"
+    Info (13026): Duplicate LATCH primitive "Memoria_instrucao:teste_MI|RD1[26]" merged with LATCH primitive "Memoria_instrucao:teste_MI|RD1[25]"
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[6]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[2]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[6]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[6]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[6]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[7]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[6]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[6]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[2]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[20] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[6]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[21] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[2]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[22] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[6]
+Warning (13012): Latch Memoria_instrucao:teste_MI|RD1[25] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgamCounter:teste_PC|PC[6]
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "LCD_DATA[0]~synth"
+    Warning (13010): Node "LCD_DATA[1]~synth"
+    Warning (13010): Node "LCD_DATA[2]~synth"
+    Warning (13010): Node "LCD_DATA[3]~synth"
+    Warning (13010): Node "LCD_DATA[4]~synth"
+    Warning (13010): Node "LCD_DATA[5]~synth"
+    Warning (13010): Node "LCD_DATA[6]~synth"
+    Warning (13010): Node "LCD_DATA[7]~synth"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX0[6]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at VCC
+    Warning (13410): Pin "HEX0[4]" is stuck at VCC
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "HEX4[4]" is stuck at GND
+    Warning (13410): Pin "HEX4[3]" is stuck at GND
+    Warning (13410): Pin "HEX4[1]" is stuck at GND
+    Warning (13410): Pin "HEX4[0]" is stuck at GND
+    Warning (13410): Pin "HEX7[6]" is stuck at VCC
+    Warning (13410): Pin "HEX7[5]" is stuck at GND
+    Warning (13410): Pin "HEX7[4]" is stuck at GND
+    Warning (13410): Pin "HEX7[3]" is stuck at GND
+    Warning (13410): Pin "HEX7[2]" is stuck at GND
+    Warning (13410): Pin "HEX7[1]" is stuck at GND
+    Warning (13410): Pin "HEX7[0]" is stuck at GND
+    Warning (13410): Pin "LEDG[0]" is stuck at GND
+    Warning (13410): Pin "LEDG[1]" is stuck at GND
+    Warning (13410): Pin "LEDG[2]" is stuck at GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+    Warning (13410): Pin "LEDG[6]" is stuck at GND
+    Warning (13410): Pin "LEDG[7]" is stuck at GND
+    Warning (13410): Pin "LEDG[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND
+    Warning (13410): Pin "LEDR[3]" is stuck at GND
+    Warning (13410): Pin "LEDR[5]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+    Warning (13410): Pin "LEDR[10]" is stuck at GND
+    Warning (13410): Pin "LEDR[11]" is stuck at GND
+    Warning (13410): Pin "LEDR[12]" is stuck at GND
+    Warning (13410): Pin "LEDR[13]" is stuck at GND
+    Warning (13410): Pin "LEDR[14]" is stuck at GND
+    Warning (13410): Pin "LEDR[15]" is stuck at GND
+    Warning (13410): Pin "LEDR[16]" is stuck at GND
+    Warning (13410): Pin "LEDR[17]" is stuck at GND
+    Warning (13410): Pin "UART_TXD" is stuck at GND
+    Warning (13410): Pin "LCD_ON" is stuck at VCC
+    Warning (13410): Pin "LCD_BLON" is stuck at VCC
+    Warning (13410): Pin "LCD_RW" is stuck at GND
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file E:/LASD/2020.1/DAVYARAUJO_120110402/output_files/Mod_Teste.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK_27"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+    Warning (15610): No output dependent on input pin "UART_RXD"
+Info (21057): Implemented 4506 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 25 input pins
+    Info (21059): Implemented 89 output pins
+    Info (21060): Implemented 80 bidirectional pins
+    Info (21061): Implemented 4312 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 134 warnings
+    Info: Peak virtual memory: 4603 megabytes
+    Info: Processing ended: Fri Sep 29 11:07:59 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/LASD/2020.1/DAVYARAUJO_120110402/output_files/Mod_Teste.map.smsg.
+
+

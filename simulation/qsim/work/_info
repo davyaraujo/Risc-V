@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\LASD\2020.1\DAVYARAUJO_120110402\simulation\qsim
+vMod_Teste
+Z1 IdL0@4N[lI_OSL7eZ0EMC;2
+Z2 VK`d1[?KbN;DoS]1hM94Qb3
+Z3 dE:\LASD\2020.1\DAVYARAUJO_120110402\simulation\qsim
+Z4 w1691156357
+Z5 8Mod_Teste.vo
+Z6 FMod_Teste.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Mod_Teste.vo|
+Z9 o-work work -O0
+Z10 n@mod_@teste
+!i10b 1
+Z11 !s100 mgCMW_3>2k:5L=>k0Jf=61
+!s85 0
+Z12 !s108 1691156357.748000
+Z13 !s107 Mod_Teste.vo|
+!s101 -O0
+vMod_Teste_vlg_check_tst
+!i10b 1
+Z14 !s100 V1SAReKfl^6oTl1OEiBz43
+Z15 IN:onK0g9WWgC8mInQ6h3Q2
+Z16 VZPVJ4FoTkGcgIh[2QZ^FP1
+R3
+Z17 w1691156356
+Z18 8Mod_Teste.vt
+Z19 FMod_Teste.vt
+L0 71
+R7
+r1
+!s85 0
+31
+Z20 !s108 1691156357.935000
+Z21 !s107 Mod_Teste.vt|
+Z22 !s90 -work|work|Mod_Teste.vt|
+!s101 -O0
+R9
+Z23 n@mod_@teste_vlg_check_tst
+vMod_Teste_vlg_sample_tst
+!i10b 1
+Z24 !s100 9^HOHK0^Ul?hKF1f@nY^c2
+Z25 I7[R7f0TGzma5IIj<NYS660
+Z26 VlG7R9WDMc;l1LOVf2;n[]1
+R3
+R17
+R18
+R19
+L0 29
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 n@mod_@teste_vlg_sample_tst
+vMod_Teste_vlg_vec_tst
+!i10b 1
+!s100 ]3:PH1kF2ZRdAfom]8F3A1
+IgzFeD^YaNG?2J]0GRXRPW1
+Z28 V4h^N8TEF^h^5beeNeGm?e0
+R3
+R17
+R18
+R19
+Z29 L0 519
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z30 n@mod_@teste_vlg_vec_tst
