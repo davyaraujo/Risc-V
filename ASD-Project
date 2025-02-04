@@ -1,1 +1,168 @@
+passoA:
+
+.data
+    # Mensagens para solicitar entrada do usuário
+
+	numero1: .asciz "\n\nDigite o primeiro número: "
+	numero2: .asciz "Digite o segundoo número: "
+
+.text
+    # Início do programa
+inicio:
+    # Código para solicitar e ler o primeiro número
+	li a7,4
+	la a0,numero1
+	ecall
+	
+	li a7,8
+	li a0,0x1c0
+	li a1,13
+	ecall
+	lb a2,0(a0)
+	
+    # Verificação de vazio e tratamento, se necessário
+	li s0,10 #vazio é representado pela palavra A
+	bne a2,s0,exit
+	li a7,10
+	ecall
+exit:
+    # Conversão do primeiro número de ASCII para inteiro	
+convert_loop:
+
+        li s3,48
+     	li s4,10
+     	li t6,13
+     	lw t1,0(a0)
+     	
+     	andi t1,t1,15
+     	beq t1,t6,negativo
+   
+loop:
+	lbu t0, 0(a0)
+     	sub s6,t0,s3 
+     	add s5,s5,s6
+     	addi a0,a0,1
+     	lbu t0, 0(a0)
+     	beq t0,s4,done
+     	mul s5,s5,s4
+     	j loop
+
+   # Lógica para lidar com números negativos durante a conversão
+negativo:
+    	lbu t0, 1(a0)
+    	sub s6,t0,s3 
+    	add s5,s5,s6
+    	addi a0,a0,1
+    	lbu t0, 1(a0)
+    	beq t0,s4,negar
+    	mul s5,s5,s4
+    	j negativo	
+negar:
+    	neg s5,s5
+done:
+#Para printar e ler o segundo número
+	li a7,4
+	la a0,numero2
+	ecall
+	
+	li a7,8
+	li a0,0x1e0
+	li a1,13
+	
+	ecall
+	lb a2,0(a0)
+	
+	#tratamento vazio
+	li s0,10 #vazio é representado pela palavra A
+	bne a2,s0,exit2
+	
+	li a7,10
+	ecall
+	
+exit2:
+
+convert_loop2:
+     	
+     	lw t1,0(a0)
+     	andi t1,t1,15
+     	beq t1,t6,negativo2
+   
+loop2:
+	lbu t0, 0(a0)
+     	sub s10,t0,s3 
+     	add s9,s9,s10
+     	addi a0,a0,1
+     	lbu t0, 0(a0)
+     	beq t0,s4,done2
+     	mul s9,s9,s4
+     	j loop2
+
+    
+negativo2:
+    	lbu t0, 1(a0)
+    	sub s10,t0,s3 
+    	add s9,s9,s10
+    	addi a0,a0,1
+    	lbu t0, 1(a0)
+    	beq t0,s4,negar2
+    	mul s9,s9,s4
+    	j negativo2	
+negar2:
+    	neg s9,s9
+
+
+done2:
+ 	
+	fcvt.d.w f2,s5 dyn
+	fcvt.d.w f3,s9 dyn
+	
+	fadd.d f4,f2,f3
+	fsub.d f5,f2,f3 
+	fmul.d f6,f2,f3
+	
+	
+	
+.data
+
+	resultado1: .asciz "\nO resultado da soma é "
+	resultado2: .asciz "\nO resultado da subtração é "
+	resultado3: .asciz "\nO resultado da multiplicação é "
+.text
+	li a7,4
+	la a0,resultado1
+	ecall
+	
+	li a7,3
+	fmv.d fa0,f4
+	ecall
+	
+	li a7,4
+	la a0,resultado2
+	ecall
+	
+	li a7,3
+	fmv.d fa0,f5
+	ecall
+	
+	li a7,4
+	la a0,resultado3
+	ecall
+	
+	li a7,3
+	fmv.d fa0,f6
+	ecall
+	j zerar
+zerar:
+	sub x2,x2,x2
+	sub t1,t1,t1
+	sub t2,t2,t2
+	sub s5,s5,s5
+	sub s6,s6,s6
+	sub s9,s9,s9
+	sub s10,s10,s10
+	fsub.d f3,f3,f3
+	fsub.d f4,f4,f4
+	fsub.d f5,f5,f5
+	fsub.d f6,f6,f6
+	j passoA
 
